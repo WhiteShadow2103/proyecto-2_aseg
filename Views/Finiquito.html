@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link Boostrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../CSS/style.css" type="text/css">
+    <!-- JS -->
+    <script src="../JS/bloqueoFunc.js"></script>
+    <title>Proyecto 2</title>
+    <link rel="icon" href="../Res/Logo_Proc2.svg" type="image/x-icon">
+</head>
+
+<body>
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand">
+                <img src="../Res/Logo_Proc2.svg" alt="Logo" width="30" height="24"
+                    class="d-inline-block align-text-top">
+                <b>Finiquitemos</b>
+            </a>
+        </div>
+    </nav>
+    <main>
+        <div class="boxForm">
+            <img src="../Res/marketing_strategy_chart_business_mail_management_icon_263068.svg" width="190"
+                height="190">
+            <img src="../Res/businessman_finance_business_management_icon_263057.svg" width="190" height="190">
+        </div>
+        <form>
+            <div class="boxForm">
+                <div class="row">
+                    <div class="col-sm-6 mb-3 mb-sm-0">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Ingrese Datos del Empleado</h5>
+                                </p>
+                                <div class="row g-3">
+                                    <div class="col">
+                                        <label class="form-label" id="Nombre">Nombre</label>
+                                        <input type="text" class="form-control" required>
+                                    </div>
+                                    <div class="col">
+                                        <label class="form-label">Apellido</label>
+                                        <input type="text" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="row g-3">
+                                    <div class="col">
+                                        <label class="form-label">Run</label>
+                                        <input type="number" class="form-control" required>
+                                    </div>
+                                    <div class="col">
+                                        <label class="form-label">Especialidad</label>
+                                        <input type="text" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Correo Electronico</label>
+                                    <input type="email" class="form-control" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Ingrese Datos de Operación</h5>
+                                </p>
+                                <div class="row g-3">
+                                    <div class="col">
+                                        <label class="form-label">Sistema Previsional</label>
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option selected>-- Selección --</option>
+                                            <option value="1">Fonasa</option>
+                                            <option value="2">Isapre</option>
+                                            <option value="3">Otros</option>
+                                        </select>
+                                    </div>
+                                    <div class="col">
+                                        <label class="form-label"> Cotizaciones </label>
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option selected>-- Selección --</option>
+                                            <option value="1">Cuprum</option>
+                                            <option value="2">Plan Vital</option>
+                                            <option value="3">AFP Modelo</option>
+                                            <option value="4">AFP Uno</option>
+                                            <option value="5">AFP Capital</option>
+                                            <option value="6">Otros</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row g-3">
+                                    <div class="col">
+                                        <label class="form-label">Años de Servicio</label>
+                                        <input type="number" class="form-control" required>
+                                    </div>
+                                    <div class="col">
+                                        <label class="form-label">Horas Extra</label>
+                                        <input type="number" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="row g-3">
+                                    <div class="mb-3">
+                                        <label class="form-label">Número identidicador de Empleado</label>
+                                        <input type="numbre" class="form-control" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </p>
+                    <div class="col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Ingrese Datos de Empleabilidad</h5>
+                                </p>
+                                <div class="row g-3">
+                                    <div class="col">
+                                        <label class="form-label">Sistema Previsional</label>
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option selected>-- Selección --</option>
+                                            <option value="1">Fonasa</option>
+                                            <option value="2">Isapre</option>
+                                            <option value="3">Otros</option>
+                                        </select>
+                                    </div>
+                                    <div class="col">
+                                        <label class="form-label"> Cotizaciones </label>
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option selected>-- Selección --</option>
+                                            <option value="1">Cuprum</option>
+                                            <option value="2">Plan Vital</option>
+                                            <option value="3">AFP Modelo</option>
+                                            <option value="4">AFP Uno</option>
+                                            <option value="5">AFP Capital</option>
+                                            <option value="6">Otros</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row g-3">
+                                    <div class="col">
+                                        <label class="form-label">Años de Servicio</label>
+                                        <input type="number" class="form-control" required>
+                                    </div>
+                                    <div class="col">
+                                        <label class="form-label">Horas Extra</label>
+                                        <input type="number" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="row g-3">
+                                    <div class="mb-3">
+                                        <label class="form-label">Número identidicador de Empleado</label>
+                                        <input type="numbre" class="form-control" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Ingrese Datos Adicionales</h5>
+                                </p>
+                                <div class="row g-3">
+                                    <div class="col">
+                                        <label class="form-label">Sistema Previsional</label>
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option selected>-- Selección --</option>
+                                            <option value="1">Fonasa</option>
+                                            <option value="2">Isapre</option>
+                                            <option value="3">Otros</option>
+                                        </select>
+                                    </div>
+                                    <div class="col">
+                                        <label class="form-label"> Cotizaciones </label>
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option selected>-- Selección --</option>
+                                            <option value="1">Cuprum</option>
+                                            <option value="2">Plan Vital</option>
+                                            <option value="3">AFP Modelo</option>
+                                            <option value="4">AFP Uno</option>
+                                            <option value="5">AFP Capital</option>
+                                            <option value="6">Otros</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row g-3">
+                                    <div class="col">
+                                        <label class="form-label">Años de Servicio</label>
+                                        <input type="number" class="form-control" required>
+                                    </div>
+                                    <div class="col">
+                                        <label class="form-label">Horas Extra</label>
+                                        <input type="number" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="row g-3">
+                                    <div class="mb-3">
+                                        <label class="form-label">Número identidicador de Empleado</label>
+                                        <input type="numbre" class="form-control" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    </p>
+                    </p>
+                    <div>
+                        <div class="d-grid gap-2 col-6 mx-auto">
+                            <button class="btn btn-primary" type="button">Generar</button>
+                            <a href="../Index.html" class="btn btn-danger" type="button">Volver</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; Finiquitemos. Todos los derechos reservados.</p>
+    </footer>
+</body>
+<!-- <script src="../JS/generar_PDF.js"></script> -->
+
+</html>
