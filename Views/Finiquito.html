@@ -44,27 +44,27 @@
                                 </p>
                                 <div class="row g-3">
                                     <div class="col">
-                                        <label class="form-label" id="nombre">Nombre</label>
-                                        <input type="text" class="form-control" required>
+                                        <label class="form-label" >Nombre</label>
+                                        <input type="text" class="form-control" required id="nombre">
                                     </div>
                                     <div class="col">
-                                        <label class="form-label" id="apellido">Apellido</label>
-                                        <input type="text" class="form-control" required>
+                                        <label class="form-label" >Apellido</label>
+                                        <input type="text" class="form-control" required id="apellido">
                                     </div>
                                 </div>
                                 <div class="row g-3">
                                     <div class="col">
-                                        <label class="form-label" id="run">Run</label>
-                                        <input type="number" class="form-control" required>
+                                        <label class="form-label" >Run</label>
+                                        <input type="number" class="form-control" required id="run">
                                     </div>
                                     <div class="col">
-                                        <label class="form-label" id="especialidad">Especialidad</label>
-                                        <input type="text" class="form-control" required>
+                                        <label class="form-label" >Especialidad</label>
+                                        <input type="text" class="form-control" required id="especialidad">
                                     </div>
                                 </div>
                                 <div class="mb-3">
-                                    <label class="form-label" id="correo">Correo Electronico</label>
-                                    <input type="email" class="form-control" required>
+                                    <label class="form-label" >Correo Electronico</label>
+                                    <input type="email" class="form-control" required id="correo">
                                 </div>
                             </div>
                         </div>
@@ -78,11 +78,12 @@
                                     <div class="col">
                                         <label class="form-label">Sistema Previsional</label>
                                         <select class="form-select" aria-label="Default select example"
-                                            id="sPrevisional"> <!--sPrevisional = Sistema Previsional-->
+                                            id="sPrevisional"> 
+                                            <!--sPrevisional = Sistema Previsional-->
                                             <option selected>-- Selección --</option>
-                                            <option value="1">Fonasa</option>
-                                            <option value="2">Isapre</option>
-                                            <option value="3">Otros</option>
+                                            <option value="Fonasa">Fonasa</option>
+                                            <option value="isapre">Isapre</option>
+                                            <option value="Otros">Otros</option>
                                         </select>
                                     </div>
                                     <div class="col">
@@ -90,32 +91,32 @@
                                         <select class="form-select" aria-label="Default select example"
                                             id="cotizaciones">
                                             <option selected>-- Selección --</option>
-                                            <option value="1">Cuprum</option>
-                                            <option value="2">Plan Vital</option>
-                                            <option value="3">AFP Modelo</option>
-                                            <option value="4">AFP Uno</option>
-                                            <option value="5">AFP Capital</option>
-                                            <option value="6">Otros</option>
+                                            <option value="Cuprum">Cuprum</option>
+                                            <option value="Plan Vital">Plan Vital</option>
+                                            <option value="AFP Modelo">AFP Modelo</option>
+                                            <option value="AFP Uno">AFP Uno</option>
+                                            <option value="AFP Capital">AFP Capital</option>
+                                            <option value="Otros">Otros</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="row g-3">
                                     <div class="col">
-                                        <label class="form-label" id="aServicio">Años de Servicio</label>
+                                        <label class="form-label" >Años de Servicio</label>
+                                        <input type="number" class="form-control" required id="aServicio">
                                         <!--aServicio = Años de Servicio-->
-                                        <input type="number" class="form-control" required>
                                     </div>
                                     <div class="col">
-                                        <label class="form-label" id="horasEx">Horas Extra</label>
+                                        <label class="form-label" >Horas Extra</label>
+                                        <input type="number" class="form-control" required id="horasEx">
                                         <!--horasEx = Horas Extra-->
-                                        <input type="number" class="form-control" required>
                                     </div>
                                 </div>
                                 <div class="row g-3">
                                     <div class="mb-3">
-                                        <label class="form-label" id="numId">Número identidicador de Empleado</label>
+                                        <label class="form-label" >Número identidicador de Empleado</label>
+                                        <input type="numbre" class="form-control" required id="numId">
                                         <!--numId = Numero identificador de empleo-->
-                                        <input type="numbre" class="form-control" required>
                                     </div>
                                 </div>
                             </div>
@@ -130,11 +131,13 @@
                                 <div class="row g-3">
                                     <div class="col">
                                         <label class="form-label">Pago por Hora</label>
-                                        <input type="number" class="form-control" required>
+                                        <input type="number" class="form-control" required id="pHora">
+                                        <!--pHora = Pago por hora-->
                                     </div>
                                     <div class="col">
                                         <label class="form-label">Horas semanales de Trabajo</label>
-                                        <input type="number" class="form-control" required>
+                                        <input type="number" class="form-control" required id="hSemanales">
+                                        <!--hSemanales = hora semanales-->
                                     </div>
                                 </div>
                             </div>
@@ -156,7 +159,7 @@
                     </p>
                     <div>
                         <div class="d-grid gap-2 col-6 mx-auto">
-                            <button class="btn btn-primary" type="button">Generar</button>
+                            <a class="btn btn-primary" type="button" href="javascript:genPDF()">Generar</a>
                             <a href="../Index.html" class="btn btn-danger" type="button">Volver</a>
                         </div>
                     </div>
@@ -168,5 +171,27 @@
         <p>&copy; Finiquitemos. Todos los derechos reservados.</p>
     </footer>
 </body>
+
+<script type="text/javascript" src="../Control/jspdf.min.js"></script>
+<script type="text/javascript">
+    function genPDF() {
+        var doc = new jsPDF();
+        doc.text(20, 20, document.getElementById('nombre').value);
+        doc.text(20, 25, 'holas');
+        doc.line(20, 23, 200, 23 );
+        doc.text(20, 30, document.getElementById('apellido').value);
+        doc.text(20, 35, document.getElementById('run').value);
+        doc.text(20, 40, document.getElementById('especialidad').value);
+        doc.text(20, 45, document.getElementById('correo').value);
+        doc.text(20, 50, document.getElementById('sPrevisional').value);
+        doc.text(20, 55, document.getElementById('cotizaciones').value);
+        doc.text(20, 60, document.getElementById('aServicio').value);
+        doc.text(20, 65, document.getElementById('horasEx').value);
+        doc.text(20, 70, document.getElementById('numId').value);
+        doc.text(20, 75, document.getElementById('pHora').value);
+        doc.text(20, 80, document.getElementById('hSemanales').value);
+        doc.save('Test.pdf');
+    }
+</script>
 
 </html>
