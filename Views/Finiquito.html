@@ -186,23 +186,23 @@
         console.log(`${suelBruto} : liquido ${suelLiqui}`);
 
         var doc = new jsPDF();
-        doc.text(20, 20, document.getElementById('nombre').value), 
-        doc.text(20, 27, document.getElementById('run').value);
-        doc.line(20, 30, 200, 32);
-        doc.text(20, 40, document.getElementById('apellido').value);
-        doc.text(20, 45, document.getElementById('especialidad').value);
-        doc.text(20, 50, document.getElementById('correo').value);
-        doc.text(20, 55, document.getElementById('sPrevisional').value);
-        doc.text(20, 60, document.getElementById('cotizaciones').value);
-        doc.text(20, 65, document.getElementById('aServicio').value);
-        doc.text(20, 70, document.getElementById('horasEx').value);
-        doc.text(20, 75, document.getElementById('numId').value);
-        doc.text(20, 80, document.getElementById('pHora').value);
-        doc.text(20, 85, document.getElementById('hSemanales').value);
-        doc.text(20, 130, "Sueldo Bruto: ");
-        doc.text(20, 136, `$${suelBruto}`);
-        doc.text(20, 145, "Sueldo Liquido: ");
-        doc.text(20, 151, `$${suelLiqui}`);
+        doc.text(20, 20, `Nombre y apellido: ${document.getElementById('nombre').value} ${document.getElementById('apellido').value}`), 
+        doc.text(20, 27, `Run: ${document.getElementById('run').value}`);
+        doc.line(20, 30, 200, 30);
+        doc.text(20, 40, `Especialidad: ${document.getElementById('especialidad').value}`);
+        doc.text(20, 47, `Correo: ${document.getElementById('correo').value}`);
+        doc.text(20, 54, `Servicio previsional: ${document.getElementById('sPrevisional').value}`);
+        doc.text(20, 61, `Cotizacion: ${document.getElementById('cotizaciones').value}`);
+        doc.text(20, 68, `Años de servicio: ${document.getElementById('aServicio').value} años`);
+        doc.text(20, 73, `Numero de identificacion: ${document.getElementById('numId').value}`);
+        doc.line(20, 76, 200, 76);
+        doc.text(20, 86, `Horas extra: ${document.getElementById('horasEx').value} horas en total`);
+        doc.text(20, 93, `Pago por hora: $${document.getElementById('pHora').value}`);
+        doc.text(20, 100, `Horas semanales: ${document.getElementById('hSemanales').value} horas`);
+        doc.text(20, 107, "Sueldo Bruto: ");
+        doc.text(20, 114, `$${suelBruto}`);
+        doc.text(20, 121, "Sueldo Liquido: ");
+        doc.text(20, 128, `$${suelLiqui}`);
         doc.save('Test.pdf');
         getall(document.getElementById('nombre').value, 
             document.getElementById('apellido').value, 
