@@ -19,6 +19,7 @@ function getall(nombre, apellido, run, especialidad, correo, sistema, coti, año
     let query1 = `INSERT INTO finiquito VALUES (${nombre},${apellido},${run},${especialidad},${correo},${sistema},${coti},${años},${sueldoBruto},${sueldoLiquido})`;
     
     console.log(query1);
+    conexion.query(query1);
 };
 
 conexion.end();

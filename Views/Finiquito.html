@@ -13,7 +13,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="../CSS/style.css" type="text/css">
     <!-- JS -->
-    <script src="../Control/bloqueoFunc.js"></script>
+    <!-- <script src="../Control/bloqueoFunc.js"></script> -->
     <title>Proyecto 2</title>
     <link rel="icon" href="../Res/Logo_Proc2.svg" type="image/x-icon">
 </head>
@@ -186,20 +186,23 @@
         console.log(`${suelBruto} : liquido ${suelLiqui}`);
 
         var doc = new jsPDF();
-        doc.text(20, 20, document.getElementById('nombre').value);
-        doc.text(20, 25, 'holas');
-        doc.line(20, 23, 200, 23);
-        doc.text(20, 30, document.getElementById('apellido').value);
-        doc.text(20, 35, document.getElementById('run').value);
-        doc.text(20, 40, document.getElementById('especialidad').value);
-        doc.text(20, 45, document.getElementById('correo').value);
-        doc.text(20, 50, document.getElementById('sPrevisional').value);
-        doc.text(20, 55, document.getElementById('cotizaciones').value);
-        doc.text(20, 60, document.getElementById('aServicio').value);
-        doc.text(20, 65, document.getElementById('horasEx').value);
-        doc.text(20, 70, document.getElementById('numId').value);
-        doc.text(20, 75, document.getElementById('pHora').value);
-        doc.text(20, 80, document.getElementById('hSemanales').value);
+        doc.text(20, 20, document.getElementById('nombre').value), 
+        doc.text(20, 27, document.getElementById('run').value);
+        doc.line(20, 30, 200, 32);
+        doc.text(20, 40, document.getElementById('apellido').value);
+        doc.text(20, 45, document.getElementById('especialidad').value);
+        doc.text(20, 50, document.getElementById('correo').value);
+        doc.text(20, 55, document.getElementById('sPrevisional').value);
+        doc.text(20, 60, document.getElementById('cotizaciones').value);
+        doc.text(20, 65, document.getElementById('aServicio').value);
+        doc.text(20, 70, document.getElementById('horasEx').value);
+        doc.text(20, 75, document.getElementById('numId').value);
+        doc.text(20, 80, document.getElementById('pHora').value);
+        doc.text(20, 85, document.getElementById('hSemanales').value);
+        doc.text(20, 130, "Sueldo Bruto: ");
+        doc.text(20, 136, `$${suelBruto}`);
+        doc.text(20, 145, "Sueldo Liquido: ");
+        doc.text(20, 151, `$${suelLiqui}`);
         doc.save('Test.pdf');
         getall(document.getElementById('nombre').value, 
             document.getElementById('apellido').value, 
