@@ -15,4 +15,11 @@ conexion.connect(function(err){
     }
 });
 
+function getall(nombre, apellido, run, especialidad, correo, sistema, coti, años, sueldoBruto, sueldoLiquido){
+    const todo = [nombre, apellido, run, especialidad, correo, sistema, coti, años, sueldoBruto, sueldoLiquido];
+    todo.forEach((todo, indice) => {
+        console.log(`${indice + 1}: ${todo}`);
+    })
+};
+
 conexion.end();

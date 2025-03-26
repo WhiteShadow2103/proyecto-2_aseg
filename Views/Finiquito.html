@@ -44,26 +44,26 @@
                                 </p>
                                 <div class="row g-3">
                                     <div class="col">
-                                        <label class="form-label" >Nombre</label>
+                                        <label class="form-label">Nombre</label>
                                         <input type="text" class="form-control" required id="nombre">
                                     </div>
                                     <div class="col">
-                                        <label class="form-label" >Apellido</label>
+                                        <label class="form-label">Apellido</label>
                                         <input type="text" class="form-control" required id="apellido">
                                     </div>
                                 </div>
                                 <div class="row g-3">
                                     <div class="col">
-                                        <label class="form-label" >Run</label>
+                                        <label class="form-label">Run</label>
                                         <input type="number" class="form-control" required id="run">
                                     </div>
                                     <div class="col">
-                                        <label class="form-label" >Especialidad</label>
+                                        <label class="form-label">Especialidad</label>
                                         <input type="text" class="form-control" required id="especialidad">
                                     </div>
                                 </div>
                                 <div class="mb-3">
-                                    <label class="form-label" >Correo Electronico</label>
+                                    <label class="form-label">Correo Electronico</label>
                                     <input type="email" class="form-control" required id="correo">
                                 </div>
                             </div>
@@ -78,7 +78,7 @@
                                     <div class="col">
                                         <label class="form-label">Sistema Previsional</label>
                                         <select class="form-select" aria-label="Default select example"
-                                            id="sPrevisional"> 
+                                            id="sPrevisional">
                                             <!--sPrevisional = Sistema Previsional-->
                                             <option selected>-- Selección --</option>
                                             <option value="Fonasa">Fonasa</option>
@@ -102,19 +102,19 @@
                                 </div>
                                 <div class="row g-3">
                                     <div class="col">
-                                        <label class="form-label" >Años de Servicio</label>
+                                        <label class="form-label">Años de Servicio</label>
                                         <input type="number" class="form-control" required id="aServicio">
                                         <!--aServicio = Años de Servicio-->
                                     </div>
                                     <div class="col">
-                                        <label class="form-label" >Horas Extra</label>
+                                        <label class="form-label">Horas Extra</label>
                                         <input type="number" class="form-control" required id="horasEx">
                                         <!--horasEx = Horas Extra-->
                                     </div>
                                 </div>
                                 <div class="row g-3">
                                     <div class="mb-3">
-                                        <label class="form-label" >Número identidicador de Empleado</label>
+                                        <label class="form-label">Número identidicador de Empleado</label>
                                         <input type="numbre" class="form-control" required id="numId">
                                         <!--numId = Numero identificador de empleo-->
                                     </div>
@@ -173,12 +173,22 @@
 </body>
 
 <script type="text/javascript" src="../Control/jspdf.min.js"></script>
+<script type="text/javascript" src="../Control/conexion.js"></script>
 <script type="text/javascript">
+
     function genPDF() {
+
+        let phoras = +document.getElementById('pHora').value;
+        let hosema = +document.getElementById('hSemanales').value;
+        let hoextr = +document.getElementById('horasEx').value;
+        let suelBruto = phoras * hosema + hoextr * (phoras * 1.5);
+        let suelLiqui = suelBruto - (suelBruto * 0.1 ) - (suelBruto * 0.07);
+        console.log(`${suelBruto} : liquido ${suelLiqui}`);
+
         var doc = new jsPDF();
         doc.text(20, 20, document.getElementById('nombre').value);
         doc.text(20, 25, 'holas');
-        doc.line(20, 23, 200, 23 );
+        doc.line(20, 23, 200, 23);
         doc.text(20, 30, document.getElementById('apellido').value);
         doc.text(20, 35, document.getElementById('run').value);
         doc.text(20, 40, document.getElementById('especialidad').value);
@@ -191,7 +201,20 @@
         doc.text(20, 75, document.getElementById('pHora').value);
         doc.text(20, 80, document.getElementById('hSemanales').value);
         doc.save('Test.pdf');
+        getall(document.getElementById('nombre').value, 
+            document.getElementById('apellido').value, 
+            document.getElementById('run').value,
+            document.getElementById('especialidad').value,
+            document.getElementById('correo').value,
+            document.getElementById('sPrevisional').value,
+            document.getElementById('cotizaciones').value,
+            document.getElementById('aServicio').value,
+            suelBruto,
+            suelLiqui
+            );
     }
+
 </script>
+<script type="text/javascript" src="../Control/conexion.js"></script>
 
 </html>
