@@ -1,8 +1,8 @@
-let mysql = require("mysql");
+import { createConnection } from "mysql";
 
-let conexion = mysql.createConnection({
+let conexion = createConnection({
     host: "localhost",
-    database: "",
+    database: "act_aseg_2",
     user: "root",
     password: ""
 });
@@ -16,10 +16,9 @@ conexion.connect(function(err){
 });
 
 function getall(nombre, apellido, run, especialidad, correo, sistema, coti, años, sueldoBruto, sueldoLiquido){
-    const todo = [nombre, apellido, run, especialidad, correo, sistema, coti, años, sueldoBruto, sueldoLiquido];
-    todo.forEach((todo, indice) => {
-        console.log(`${indice + 1}: ${todo}`);
-    })
+    let query1 = `INSERT INTO finiquito VALUES (${nombre},${apellido},${run},${especialidad},${correo},${sistema},${coti},${años},${sueldoBruto},${sueldoLiquido})`;
+    
+    console.log(query1);
 };
 
 conexion.end();
